@@ -1,6 +1,6 @@
 Config = {}
 
-Config.Framework = "ESX" -- QB / ESX
+Config.Framework = "QB" -- QB / ESX
 Config.QBCoreName = 'qb-core'
 
 Config.NPC = {
