@@ -9,7 +9,6 @@ shared_scripts {
     '@es_extended/imports.lua',
     '@es_extended/locale.lua',
     '@ox_lib/init.lua',
-    'locale.lua',
     'config.lua'
 }
 
