@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 games { 'gta5' }
 
-description 'ESX Job Selector'
+description 'ESX/QB Job Selector'
 
 lua54 'yes'
 

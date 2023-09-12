@@ -1,3 +1,7 @@
+if Config.Framework == 'QB' then
+    local QBCore = exports[Config.QBCoreName]:GetCoreObject()
+end
+
 CreateThread(function()
     for k,v in pairs(Config.NPC) do
         modelHash = GetHashKey(v.model)
@@ -11,7 +15,7 @@ CreateThread(function()
 	    SetBlockingOfNonTemporaryEvents(created_ped, true)
 
         exports.ox_target:addModel(v.model, {
-            label = TranslateCap('jobselector_target'),
+            label = 'Job Selector',
             icon = "fa-regular fa-user",
             event = "ld-jobselector:openMenu",
         })
@@ -21,10 +25,10 @@ end)
 RegisterNetEvent('ld-jobselector:openMenu', function()
     lib.registerContext({
         id = 'main_menu',
-        title = TranslateCap('title_menu'),
+        title = 'Job Selector Menu',
         options = {
           {
-            title = TranslateCap('takejob_menu'),
+            title = 'Take job',
             icon = 'fas fa-address-book',
             event = 'ld-jobselector:jobMenu',
           }
@@ -50,7 +54,7 @@ RegisterNetEvent('ld-jobselector:jobMenu', function()
     end
     lib.registerContext({
         id = 'job_menu',
-        title = TranslateCap('jobs_title'),
+        title = 'Jobs',
         menu = 'main_menu',
         options = jobMenu
     })

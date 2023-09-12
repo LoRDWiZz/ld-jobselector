@@ -1,5 +1,7 @@
 Config = {}
-Config.Locale = GetConvar('esx:locale', 'en')
+
+Config.Framework = "QB" -- QB / ESX
+Config.QBCoreName = 'qb-core'
 
 Config.NPC = {
     [1] = {
